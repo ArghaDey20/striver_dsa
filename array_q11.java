@@ -5,8 +5,8 @@ class Solution {
             if (nums[i]==1){
                 tempcount+=1;
             }
-            else if(nums[i]==0){
-                count=tempcount;
+            if(nums[i]==0||i==nums.length-1){
+                count=Math.max(count,tempcount);
                 tempcount=0;
             }
         }
